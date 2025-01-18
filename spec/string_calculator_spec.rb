@@ -35,13 +35,13 @@ RSpec.describe "String Calculator" do
 
 		context "when input conatin negative number" do
 			it "raise error with message negative number not allowed" do
-				expect(StringCalculator.add("-1, 4, 5")).to raise("Negative numbers not allowed")
+				expect{StringCalculator.add("-1, 4, 5")}.to raise("Negative numbers not allowed")
 			end
 		end
 
 		context "when input conatin multiple negative number" do
 			it "raise error with message negative numbers not allowed" do
-				expect(StringCalculator.add("-1, -4, 5")).to raise("Negative numbers not allowed")
+				expect{StringCalculator.add("-1, -4, 5")}.to raise("Negative numbers not allowed")
 			end
 		end
 	end
